@@ -1,0 +1,1063 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>THRIVE — Good Style, Second Life.</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- HEADER -->
+    <header>
+
+        <div class="logo">
+            THRIVE
+            <span>GOOD STYLE, SECOND LIFE.</span>
+        </div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#catalog">Explore</a>
+
+            <a href="#sell"
+               onclick="openSell(); return false;">
+                Sell
+            </a>
+
+            <a href="#"
+               onclick="openWishlist(); return false;">
+                Wishlist
+            </a>
+
+            <a href="#"
+               onclick="openProfile(); return false;">
+                Profile
+            </a>
+        </nav>
+
+        <div class="header-icons">
+
+            <span onclick="openCart()"
+                  style="cursor:pointer">
+                🛒
+            </span>
+
+            <span onclick="openWishlist()"
+                  style="cursor:pointer"
+                  title="Wishlist">
+                ♡
+            </span>
+
+        </div>
+
+    </header>
+
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <div class="hero-small">
+                THRIFT FASHION MARKETPLACE
+            </div>
+
+            <h1>
+                Good Style,
+                <br>
+                Second Life.
+            </h1>
+
+            <p>
+                Baju kece nggak harus mahal.
+                Yuk, temuin hidden gems favoritmu
+                dan kasih mereka kesempatan kedua.
+            </p>
+
+            <button class="btn"
+                    onclick="goToCatalog()">
+                Shop Now →
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- CATEGORY -->
+    <section class="section">
+
+        <div class="section-title">
+
+            <div>
+                <h2>Mau look yang mana? 👀</h2>
+
+                <p>
+                    Temuin style favoritmu di sini.
+                </p>
+            </div>
+
+            <button class="see-all"
+                    onclick="showAllProducts()">
+                Lihat Semua →
+            </button>
+
+        </div>
+
+
+        <div class="categories">
+
+            <div class="category"
+                 onclick="filterCategory('tops')">
+
+                <div class="category-icon">
+                    👚
+                </div>
+
+                <p>Tops</p>
+
+            </div>
+
+
+            <div class="category"
+                 onclick="filterCategory('bottoms')">
+
+                <div class="category-icon">
+                    👖
+                </div>
+
+                <p>Bottoms</p>
+
+            </div>
+
+
+            <div class="category"
+                 onclick="filterCategory('dress')">
+
+                <div class="category-icon">
+                    👗
+                </div>
+
+                <p>Dress</p>
+
+            </div>
+
+
+            <div class="category"
+                 onclick="filterCategory('outer')">
+
+                <div class="category-icon">
+                    🧥
+                </div>
+
+                <p>Outer</p>
+
+            </div>
+
+
+            <div class="category"
+                 onclick="filterCategory('accessories')">
+
+                <div class="category-icon">
+                    👜
+                </div>
+
+                <p>Accessories</p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FLASH THRIFT -->
+    <section class="section">
+
+        <div class="flash">
+
+            <div>
+
+                <h2>
+                    Flash Thrift 🔥
+                </h2>
+
+                <p>
+                    Yang gercep yang dapet!
+                    Harga spesial cuma sebentar.
+                </p>
+
+            </div>
+
+
+            <div class="countdown">
+
+                <div class="time">
+                    <strong id="hours">02</strong>
+                    <span>HOURS</span>
+                </div>
+
+                <div class="time">
+                    <strong id="minutes">15</strong>
+                    <span>MIN</span>
+                </div>
+
+                <div class="time">
+                    <strong id="seconds">30</strong>
+                    <span>SEC</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CATALOG -->
+    <section class="section" id="catalog">
+
+        <div class="section-title">
+
+            <div>
+
+                <h2>
+                    New Drop ✨
+                </h2>
+
+                <p>
+                    Baru masuk dan siap bikin
+                    lemari kamu makin kece.
+                </p>
+
+            </div>
+
+
+            <button class="see-all"
+                    onclick="showAllProducts()">
+                Lihat Semua →
+            </button>
+
+        </div>
+
+
+        <!-- SEARCH -->
+        <div class="search-area">
+
+            <input
+                class="search-box"
+                id="searchInput"
+                type="text"
+                placeholder="🔍 Cari baju incaranmu..."
+                onkeyup="searchProducts()"
+            >
+
+            <button class="filter-btn"
+                    onclick="openFilter()">
+                ☷ Filter
+            </button>
+
+        </div>
+
+
+        <!-- PRODUCTS -->
+        <div class="products" id="productList">
+
+
+            <!-- PRODUCT 1 -->
+            <div class="product"
+                 data-name="vintage knit cardigan">
+
+                <div class="product-image">
+
+                    <button class="heart"
+                            onclick="toggleHeart(this)">
+                        ♡
+                    </button>
+
+                    <img src="https://rebalancevintage.com/cdn/shop/files/May29-Jun13247.jpg?v=1741642468">
+
+                </div>
+
+                <div class="product-info">
+
+                    <div class="product-name">
+                        Vintage Knit Cardigan
+                    </div>
+
+                    <div class="product-price">
+                        Rp85.000
+                    </div>
+
+                    <div class="product-meta">
+                        ⭐ 4.8 · Size M · Very Good
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCT 2 -->
+            <div class="product"
+                 data-name="brown oversized shirt">
+
+                <div class="product-image">
+
+                    <button class="heart"
+                            onclick="toggleHeart(this)">
+                        ♡
+                    </button>
+
+                    <img src="https://natto-official.com/cdn/shop/files/01081-006_800x800.jpg?v=1758121519">
+
+                </div>
+
+                <div class="product-info">
+
+                    <div class="product-name">
+                        Brown Oversized Shirt
+                    </div>
+
+                    <div class="product-price">
+                        Rp65.000
+                    </div>
+
+                    <div class="product-meta">
+                        ⭐ 4.7 · Size L · Good
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCT 3 -->
+            <div class="product"
+                 data-name="straight jeans y2k">
+
+                <div class="product-image">
+
+                    <button class="heart"
+                            onclick="toggleHeart(this)">
+                        ♡
+                    </button>
+
+                    <img src="https://www.rokit.co.uk/cdn/shop/files/MECJEA97508V_1.jpg?v=1773455764">
+
+                </div>
+
+                <div class="product-info">
+
+                    <div class="product-name">
+                        Straight Jeans Y2K
+                    </div>
+
+                    <div class="product-price">
+                        Rp120.000
+                    </div>
+
+                    <div class="product-meta">
+                        ⭐ 4.9 · Size 28 · Very Good
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCT 4 -->
+            <div class="product"
+                 data-name="floral vintage dress">
+
+                <div class="product-image">
+
+                    <button class="heart"
+                            onclick="toggleHeart(this)">
+                        ♡
+                    </button>
+
+                    <img src="https://di2ponv0v5otw.cloudfront.net/posts/2025/03/30/67e9efc27ac629634bd76cac/m_67e9efc27ac629634bd76cad.jpg">
+
+                </div>
+
+                <div class="product-info">
+
+                    <div class="product-name">
+                        Floral Vintage Dress
+                    </div>
+
+                    <div class="product-price">
+                        Rp95.000
+                    </div>
+
+                    <div class="product-meta">
+                        ⭐ 4.8 · Size M · Like New
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCT 5 -->
+            <div class="product"
+                 data-name="sage knit sweater">
+
+                <div class="product-image">
+
+                    <button class="heart"
+                            onclick="toggleHeart(this)">
+                        ♡
+                    </button>
+
+                    <img src="https://www.careofcarl.fr/bilder/artiklar/600x600_grey_4_5/23993411r.jpg">
+
+                </div>
+
+                <div class="product-info">
+
+                    <div class="product-name">
+                        Sage Knit Sweater
+                    </div>
+
+                    <div class="product-price">
+                        Rp110.000
+                    </div>
+
+                    <div class="product-meta">
+                        ⭐ 4.9 · Size L · Like New
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCT 6 -->
+            <div class="product"
+                 data-name="cream basic blouse">
+
+                <div class="product-image">
+
+                    <button class="heart"
+                            onclick="toggleHeart(this)">
+                        ♡
+                    </button>
+
+                    <img src="https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BFNJ_PRD/on/demandware.static/-/Sites-stefanel-master/default/dwa251c5c5/media/products/stefanel/003/562/003562976_SF.jpg">
+
+                </div>
+
+                <div class="product-info">
+
+                    <div class="product-name">
+                        Cream Basic Blouse
+                    </div>
+
+                    <div class="product-price">
+                        Rp75.000
+                    </div>
+
+                    <div class="product-meta">
+                        ⭐ 4.7 · Size S · Very Good
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCT 7 -->
+            <div class="product"
+                 data-name="brown knit vest">
+
+                <div class="product-image">
+
+                    <button class="heart"
+                            onclick="toggleHeart(this)">
+                        ♡
+                    </button>
+
+                    <img src="https://media.falabella.com/falabellaCO/883519285_1/w%3D800%2Ch%3D800%2Cfit%3Dpad">
+
+                </div>
+
+                <div class="product-info">
+
+                    <div class="product-name">
+                        Brown Knit Vest
+                    </div>
+
+                    <div class="product-price">
+                        Rp70.000
+                    </div>
+
+                    <div class="product-meta">
+                        ⭐ 4.6 · Size M · Good
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCT 8 -->
+            <div class="product"
+                 data-name="minimalist blazer">
+
+                <div class="product-image">
+
+                    <button class="heart"
+                            onclick="toggleHeart(this)">
+                        ♡
+                    </button>
+
+                    <img src="https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/445167/sub/goods_445167_sub14.jpg">
+
+                </div>
+
+                <div class="product-info">
+
+                    <div class="product-name">
+                        Minimalist Blazer
+                    </div>
+
+                    <div class="product-price">
+                        Rp135.000
+                    </div>
+
+                    <div class="product-meta">
+                        ⭐ 4.9 · Size M · Like New
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- SELL -->
+    <section class="section" id="sell">
+
+        <div class="sell-banner">
+
+            <div>
+
+                <h2>
+                    Lemari udah penuh? 👀
+                </h2>
+
+                <p>
+                    Daripada numpuk, mending kasih kesempatan
+                    kedua buat baju kamu! Jual barang yang
+                    udah jarang dipakai dan cuan dari closet kamu.
+                </p>
+
+            </div>
+
+            <button class="btn"
+                    onclick="openSell()">
+                Jual Sekarang →
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="footer-grid">
+
+            <div>
+
+                <h3>THRIVE</h3>
+
+                <p>
+                    Good Style, Second Life.
+                </p>
+
+                <p>
+                    Baju kece nggak harus mahal.
+                    Temuin hidden gems favoritmu di THRIVE.
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <h4>Explore</h4>
+
+                <a href="#catalog"
+                   onclick="showAllProducts()">
+                    New Drop
+                </a>
+
+                <a href="#catalog"
+                   onclick="showTrending()">
+                    Trending
+                </a>
+
+                <a href="#"
+                   onclick="openInfo(
+                       'Flash Thrift 🔥',
+                       'Harga spesial buat beberapa item thrift pilihan. Gercep ya, stoknya terbatas!'
+                   ); return false;">
+                    Flash Thrift
+                </a>
+
+                <a href="#"
+                   onclick="openCategories(); return false;">
+                    Categories
+                </a>
+
+            </div>
+
+
+            <div>
+
+                <h4>Help</h4>
+
+                <a href="#"
+                   onclick="openInfo(
+                       'Cara Belanja 🛍️',
+                       'Pilih produk → buka detail → pilih ukuran → masukin keranjang → checkout. Gampang kan?'
+                   ); return false;">
+                    Cara Belanja
+                </a>
+
+                <a href="#sell"
+                   onclick="openSell()">
+                    Cara Jual
+                </a>
+
+                <a href="#"
+                   onclick="openInfo(
+                       'FAQ ❓',
+                       'Kalau ada yang mau ditanyain soal ukuran, kondisi barang, pengiriman, atau cara jual, langsung chat THRIVE ya.'
+                   ); return false;">
+                    FAQ
+                </a>
+
+                <a href="#"
+                   onclick="openContact(); return false;">
+                    Contact Us
+                </a>
+
+            </div>
+
+
+            <div>
+
+                <h4>Follow Us</h4>
+
+                <a href="https://instagram.com/thrive.thrift"
+                   target="_blank"
+                   rel="noopener">
+                    Instagram
+                </a>
+
+                <a href="https://wa.me/6280000000000"
+                   target="_blank"
+                   rel="noopener">
+                    WhatsApp
+                </a>
+
+                <p>
+                    @thrive.thrift
+                </p>
+
+                <p>
+                    08xx-xxxx-xxxx
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="copyright">
+            © 2026 THRIVE. Good Style, Second Life.
+        </div>
+
+    </footer>
+
+</div>
+
+
+<!-- PRODUCT MODAL -->
+<div class="modal" id="productModal">
+
+    <div class="modal-content">
+
+        <button class="close"
+                onclick="closeModal()">
+            ×
+        </button>
+
+        <div class="detail">
+
+            <div class="detail-image">
+                <img id="modalImage">
+            </div>
+
+
+            <div class="detail-info">
+
+                <h2 id="modalName">
+                    Product Name
+                </h2>
+
+                <div class="detail-price"
+                     id="modalPrice">
+                    Rp85.000
+                </div>
+
+
+                <div>
+
+                    <span class="tag">
+                        Like New
+                    </span>
+
+                    <span class="tag">
+                        Size M
+                    </span>
+
+                    <span class="tag">
+                        Sage Green
+                    </span>
+
+                </div>
+
+
+                <div class="size">
+
+                    <p>
+                        Pilih ukuran:
+                    </p>
+
+                    <button onclick="selectSize(this)">
+                        S
+                    </button>
+
+                    <button class="selected"
+                            onclick="selectSize(this)">
+                        M
+                    </button>
+
+                    <button onclick="selectSize(this)">
+                        L
+                    </button>
+
+                    <button onclick="selectSize(this)">
+                        XL
+                    </button>
+
+                </div>
+
+
+                <h4>
+                    Detail Ukuran
+                </h4>
+
+                <p class="detail-text">
+                    Bust: 92 cm<br>
+                    Waist: 76 cm<br>
+                    Length: 65 cm<br>
+                    Shoulder: 40 cm
+                </p>
+
+
+                <h4 class="description-title">
+                    Deskripsi
+                </h4>
+
+                <p class="detail-text">
+                    Kondisi masih cakep dan siap dipakai.
+                    Cocok buat daily outfit kamu. 🤎
+                </p>
+
+
+                <button class="btn add-cart"
+                        onclick="addToCart()">
+                    + Masukin Keranjang 🛒
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- CART -->
+<div class="cart" id="cart">
+
+    <div class="cart-header">
+
+        <h2>
+            Keranjang Kamu 🛒
+        </h2>
+
+        <button onclick="closeCart()">
+            ×
+        </button>
+
+    </div>
+
+
+    <div class="cart-item">
+
+        <img src="https://www.careofcarl.fr/bilder/artiklar/600x600_grey_4_5/23993411r.jpg">
+
+        <div class="cart-item-info">
+
+            <h4>
+                Sage Knit Sweater
+            </h4>
+
+            <p>
+                Rp110.000
+            </p>
+
+            <p>
+                Size L
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="cart-total">
+
+        <div class="total-row">
+            <span>Subtotal</span>
+            <span>Rp110.000</span>
+        </div>
+
+        <div class="total-row">
+            <span>Ongkir</span>
+            <span>Rp18.000</span>
+        </div>
+
+        <div class="total-row final">
+            <span>Total</span>
+            <span>Rp128.000</span>
+        </div>
+
+
+        <button class="btn checkout-btn"
+                onclick="openCheckout()">
+            Gas Checkout →
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- INFO MODAL -->
+<div class="modal" id="infoModal">
+
+    <div class="modal-content info-content">
+
+        <button class="close"
+                onclick="closeInfo()">
+            ×
+        </button>
+
+        <div class="info-inner">
+
+            <div class="info-icon">
+                ✨
+            </div>
+
+            <h2 id="infoTitle">
+                THRIVE
+            </h2>
+
+            <p id="infoText">
+                Good Style, Second Life.
+            </p>
+
+            <button class="btn"
+                    onclick="closeInfo()">
+                Oke, gas!
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- FILTER MODAL -->
+<div class="modal" id="filterModal">
+
+    <div class="modal-content filter-content">
+
+        <button class="close"
+                onclick="closeFilter()">
+            ×
+        </button>
+
+        <div class="info-inner">
+
+            <h2>
+                Filter barang 🧺
+            </h2>
+
+            <p>
+                Pilih kategori yang lagi kamu cari.
+            </p>
+
+
+            <div class="filter-options">
+
+                <button onclick="filterCategory('tops'); closeFilter()">
+                    Tops
+                </button>
+
+                <button onclick="filterCategory('bottoms'); closeFilter()">
+                    Bottoms
+                </button>
+
+                <button onclick="filterCategory('dress'); closeFilter()">
+                    Dress
+                </button>
+
+                <button onclick="filterCategory('outer'); closeFilter()">
+                    Outer
+                </button>
+
+                <button onclick="showAllProducts(); closeFilter()">
+                    Semua
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- SELL MODAL -->
+<div class="modal" id="sellModal">
+
+    <div class="modal-content sell-content">
+
+        <button class="close"
+                onclick="closeSell()">
+            ×
+        </button>
+
+        <div class="info-inner">
+
+            <h2>
+                Jual barang di THRIVE 💸
+            </h2>
+
+            <p>
+                Punya baju yang udah jarang dipakai?
+                Upload foto, kasih detail ukuran dan kondisi,
+                lalu tunggu pembeli yang cocok.
+            </p>
+
+            <input
+                id="sellItem"
+                placeholder="Nama barang"
+            >
+
+            <button class="btn"
+                    onclick="submitSell()">
+                Lanjut Jual →
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- CHECKOUT MODAL -->
+<div class="modal" id="checkoutModal">
+
+    <div class="modal-content checkout-content">
+
+        <button class="close"
+                onclick="closeCheckout()">
+            ×
+        </button>
+
+        <div class="info-inner">
+
+            <h2>
+                Checkout 🛍️
+            </h2>
+
+            <p>
+                Demo checkout THRIVE.
+                Isi alamat dan pilih metode pembayaran
+                untuk melanjutkan.
+            </p>
+
+
+            <input placeholder="Nama penerima">
+
+            <input placeholder="Alamat lengkap">
+
+
+            <select>
+
+                <option>
+                    Transfer Bank
+                </option>
+
+                <option>
+                    COD
+                </option>
+
+                <option>
+                    E-Wallet
+                </option>
+
+            </select>
+
+
+            <button class="btn"
+                    onclick="finishCheckout()">
+                Pesan Sekarang →
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
